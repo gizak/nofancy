@@ -1,10 +1,19 @@
 ## Nofancy
 
-Yet another [Hugo](http://hugo.spf13.com) blog theme made by love. It tries to use less design to provides full functionalities.
+Yet another [Hugo](http://hugo.spf13.com) blog theme made by love. It tries to use less design to provide full functionalities.
+
+
+### Snapshots
+
+list view:
+![list](images/snapshot.png)
+
+content view:
+![content](images/tn.png)
 
 ### Basic ideas
 
-Are you tired of all that emerging design concepts like flat or material? Are you sick of getting distracted when pages filled up with those fancy nonsense? Here I brought up a new distraction-free theme -- nofancy.
+Are you tired of all that emerging design concepts like flat or material? Are you sick of getting distracted when pages filled up with those fancy nonsense? Here I brought up a new distraction-free theme: nofancy.
 
 Some ideas behind this:
 
@@ -16,15 +25,8 @@ Some ideas behind this:
 
 4. Clean and mobile-friendly.
 
-5. Have ability to sort content by categories, tags, series.
+5. Has the ability to sort contents by categories, tags, series.
 
-### Snapshots
-
-list view:
-![list](images/snapshot.png)
-
-content view:
-![content](images/tn.png)
 
 ### Config
 
@@ -41,3 +43,7 @@ copyright = "Copyright (c) 2008 - 2014, Steve Francia; all rights reserved."
     github = "spf13"
 
 ```
+
+All your personal information is in `author` section. it also support SNS link including github, twitter, linkedin, facebook (just fill in your user id).
+
+### You are ready to go!
