@@ -1,9 +1,11 @@
-author = "gizak"
+name = "nofancy"
 description = "a distraction-free hugo theme"
 license = "MIT"
-name = "nofancy"
-source_repo = "https://github.com/gizak/nofancy"
-tags = ["blog", "distraction-free"]
+licenselink = "http://opensource.org/licenses/MIT"
+homepage = "https://github.com/gizak/nofancy"
+tags = ["blog", "personal"]
+features = ["distraction-free","black-and-white"]
 
 [author]
     name = "Zack Guo"
+    homepage = "http://gizak.github.io"
