@@ -1,0 +1,156 @@
+footer {
+	display:block;
+}
+
+html {
+	min-height:100%;
+	width:100%;
+	position:relative;
+}
+
+.body {
+	margin-bottom:2em;
+}
+
+.navbar {
+	top:0;
+	left:0;
+	display:block;
+	border-bottom: 1px solid #eee;
+	margin-bottom:10px;
+	padding-top:0.5em;
+	height:2em;
+	width:100%;
+}
+
+.navbar ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+
+.navbar a {
+	color:#333;
+	text-transform:uppercase;
+	text-decoration:none;
+	font-size:bold;
+}
+
+.brand {
+	font-weight:bold;
+	font-size:normal !important;
+}
+
+.cate {
+	font-weight:bold;
+	font-size:small;
+	margin-top:0.2em;
+}
+.navbar li {
+	display:inline;
+	margin-right:10px;
+	margin-bottom:5px;
+}
+
+.posts {
+	font-family: verdana,arial,helvetica,sans-serif;
+	list-style-type:none;
+}
+
+.posts li a {
+	color:#369;
+	text-decoration:none;
+}
+
+.small {
+	color:#888;
+	font-size:small;
+}
+
+.footnote {
+	font-family: verdana,arial,helvetica,sans-serif;
+	color:#888;
+	font-size:x-small;
+	margin-bottom:0;
+}
+
+.footnote a {
+	color: #888 !important
+}
+
+.footer {
+	position:absolute;
+	z-index:2;
+	border-top: 1px solid #eee;
+	height:1.5em;
+	width:100%;
+	bottom:0;
+	padding-top:0.1em;
+}
+
+.post {
+	z-index:9;
+	display:block;
+	font-family: 'Open Sans', 'Clear Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color:rgba(0,0,0,0.75);
+	overflow:auto;
+	padding:0;
+	padding-bottom:1em;
+	padding-top:1em;
+	font-size:16px;
+	line-height:25px;
+	-webkit-font-smoothing: antialiased;
+}
+
+.post h1 {
+	font-size:23px;
+	letter-spacing:normal;
+}
+
+.post h2 {
+	font-size:22px;
+	letter-spacing:normal;
+}
+
+.post h3 {
+	font-size:20px;
+	font-weight:bold;
+	letter-spacing:normal;
+}
+
+.post h4 {
+	font-size:20px;
+	letter-spacing:normal;
+}
+
+.post h5 {
+	font-size:19px;
+	letter-spacing:normal;
+}
+
+.post h6 {
+	font-size:18px;
+	letter-spacing:normal;
+}
+
+.away {
+	margin-top:2em;
+}
+
+.wrapper {
+	height: auto;
+	min-height:100%;
+	padding-bottom: 2em;
+}
+
+.post-wrapper {
+	margin-top:2em;
+}
+
+#post-title h5 {
+	font-weight:bold;
+	font-family: 'Open Sans', 'Clear Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color:rgb(38, 60, 76);
+	letter-spacing:normal;
+}

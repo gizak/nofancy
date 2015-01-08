@@ -1,0 +1,45 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+
+<div class="container away">
+  <div class="row">
+	<div class="eight columns offset-by-two">
+	  <p style="margin-bottom:1em;font-weight:bold;color:#333">Recent posts:</p>
+
+	  <ul class="posts">
+		{{ $baseurl := .Site.BaseUrl }}
+		{{ range $name, $page := .Site.Recent }}
+		{{ if eq .Type "post" }}
+		<li>
+		  <a href="{{ .Permalink }}">{{ $page.Title }}</a>
+
+		  <p class="footnote">
+			submitted <time datetime="{{ $page.Date.Format "2006-01-02T15:04:05Z07:00" }}" class="pull-right post-list timeago">{{ $page.Date.Format "2006-01-02T15:04:05Z07:00" }}</time>
+
+			{{ if or $page.Params.tags $page.Params.categories $page.Params.series }}
+			to
+			{{ end }}
+
+			{{ with $page.Params.tags }}
+			/tags/{{ range $page.Params.tags}}<a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a>,{{ end }}
+			{{ end }}
+
+			{{ with $page.Params.categories }}
+			/categories/{{ range $page.Params.categories }}<a href="{{ $baseurl }}/categories/{{ . | urlize }}">{{ . }}</a>,{{ end }}
+			{{ end }}
+
+			{{ with $page.Params.series }}
+			/series/{{ range $page.Params.series }}<a href="{{ $baseurl }}/series/{{ . | urlize }}">{{ . }}</a>,{{ end }}
+			{{ end }}
+
+		  </p>
+		</li>
+		{{ end }}
+		{{ end }}
+	  </ul>
+	</div>
+  </div>
+</div>
+
+{{ partial "footer.html" . }}

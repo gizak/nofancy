@@ -1,0 +1,41 @@
+<div class="footer">
+  <div class="container">
+	<div class="row">
+	  <div class="ten columns offset-by-two">
+		<p class="footnote">Copyright: All rights reserved by <a href="mailto:{{ .Site.Author.email }}">@{{ .Site.Author.name }}</a>.
+		  {{ if or .Site.Author.github .Site.Author.twitter .Site.Author.facebook .Site.Author.linkedin }}
+		  Find me at
+
+		  {{ if .Site.Author.github }}
+		  <a href="https://github.com/{{ .Site.Author.github }}" >GitHub</a>
+		  {{ end }}
+
+		  {{ if .Site.Author.facebook }}
+		  <a href="https://www.facebook.com/{{ .Site.Author.facebook }}">Facebook</a>
+		  {{ end }}
+
+		  {{ if .Site.Author.twitter }}
+		  <a href="https://twitter.com/{{ .Site.Author.twitter }}">Twitter</a>
+		  {{ end }}
+
+		  {{ if .Site.Author.linkedin }}
+		  <a href="https://www.linkedin.com/in/{{ .Site.Author.linkedin }}">Linkedin</a>
+		  {{ end }}
+
+		  {{ end }}
+		</p>
+	  </div>
+	</div>
+  </div>
+</div>
+
+<!--updated:{{ .Date }}-->
+<script src="{{ .Site.BaseUrl }}/js/jquery.min.js" type="text/javascript"></script>
+<script src="{{ .Site.BaseUrl }}/js/jquery.timeago.js" type="text/javascript"></script>
+<script type="text/javascript">
+  $(function(){
+    $("time.timeago").timeago();
+  })
+</script>
+</body>
+</html>
