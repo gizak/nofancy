@@ -44,6 +44,6 @@ copyright = "Copyright (c) 2008 - 2014, Steve Francia; all rights reserved."
 
 ```
 
-All your personal information is in `author` section. it also support SNS link including github, twitter, linkedin, facebook (just fill in your user id).
+All your personal information is in `author` section. it also support SNS links including github, twitter, linkedin, facebook (just fill in your user id).
 
 ### You are ready to go!

@@ -1,6 +1,9 @@
-author = ""
-description = ""
+author = "gizak"
+description = "a distraction-free hugo theme"
 license = "MIT"
-name = "asitis"
-source_repo = ""
-tags = ["", ""]
+name = "nofancy"
+source_repo = "https://github.com/gizak/nofancy"
+tags = ["blog", "distraction-free"]
+
+[author]
+    name = "Zack Guo"
