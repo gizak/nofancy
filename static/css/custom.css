@@ -18,16 +18,26 @@ html {
 	display:block;
 	border-bottom: 1px solid #eee;
 	margin-bottom:10px;
-	padding-top:0.5em;
 	height:2em;
 	width:100%;
 }
 
 .navbar ul {
 	list-style-type:none;
+	display: block;
 	margin:0;
 	padding:0;
 	overflow:hidden;
+	height:100%;
+}
+
+.navbar li {
+	display: inline-block;
+	position: relative;
+	margin-right:10px;
+	margin-bottom: 0;
+	top:50%;
+	transform: translateY(-50%);
 }
 
 .navbar a {
@@ -45,13 +55,8 @@ html {
 .cate {
 	font-weight:bold;
 	font-size:small;
-	margin-top:0.2em;
 }
-.navbar li {
-	display:inline;
-	margin-right:10px;
-	margin-bottom:5px;
-}
+
 
 .posts {
 	font-family: verdana,arial,helvetica,sans-serif;
@@ -63,10 +68,6 @@ html {
 	text-decoration:none;
 }
 
-.small {
-	color:#888;
-	font-size:small;
-}
 
 .footnote {
 	font-family: verdana,arial,helvetica,sans-serif;
@@ -93,7 +94,7 @@ html {
 	z-index:9;
 	display:block;
 	font-family: 'Open Sans', 'Clear Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color:rgba(0,0,0,0.75);
+	color:rgba(0,0,0,0.78);
 	overflow:auto;
 	padding:0;
 	padding-bottom:1em;
@@ -114,8 +115,7 @@ html {
 }
 
 .post h3 {
-	font-size:20px;
-	font-weight:bold;
+	font-size:21px;
 	letter-spacing:normal;
 }
 
@@ -138,11 +138,6 @@ html {
 	margin-top:2em;
 }
 
-.wrapper {
-	height: auto;
-	min-height:100%;
-	padding-bottom: 2em;
-}
 
 .post-wrapper {
 	margin-top:2em;
@@ -151,6 +146,60 @@ html {
 #post-title h5 {
 	font-weight:bold;
 	font-family: 'Open Sans', 'Clear Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color:rgb(38, 60, 76);
+	color:rgba(0, 0, 0,0.78);
 	letter-spacing:normal;
+}
+
+
+@media screen and (max-width:768px){
+	.navbar {
+		display:none;
+		overflow:visible;
+		height:auto;
+	}
+
+	.navbar li {
+		width:100%;
+		clear:both;
+		margin-bottom:5px;
+		margin-right:0;
+		transform: translateY(0);
+	}
+
+	.navbar ul {
+		height:auto;
+		overflow:auto;
+	}
+
+	.navbar .brand {
+		font-weight:normal !important;
+	}
+
+	#menu {
+		text-align:center;
+		display:block;
+		padding:0;
+		margin-bottom:10px;
+		height:1.5em;
+		padding-bottom:4px;
+		border-bottom: 1px solid #eee;
+	}
+
+	#menu a {
+		float:right;
+		cursor:pointer;
+		font-size:large;
+	}
+
+	#menu span {
+		float:left;
+		text-transform:uppercase;
+		font-weight:bold;
+	}
+}
+
+@media screen and (min-width:768px){
+	#menu {
+		display:none;
+	}
 }
