@@ -22,15 +22,15 @@
 			{{ end }}
 
 			{{ with $page.Params.tags }}
-			/tags/{{ range $page.Params.tags}}<a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a>,{{ end }}
+			tags:[ {{ range $page.Params.tags}}<a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a> {{ end }}]
 			{{ end }}
 
 			{{ with $page.Params.categories }}
-			/categories/{{ range $page.Params.categories }}<a href="{{ $baseurl }}/categories/{{ . | urlize }}">{{ . }}</a>,{{ end }}
+			categories:[ {{ range $page.Params.categories }}<a href="{{ $baseurl }}/categories/{{ . | urlize }}">{{ . }}</a> {{ end }}]
 			{{ end }}
 
 			{{ with $page.Params.series }}
-			/series/{{ range $page.Params.series }}<a href="{{ $baseurl }}/series/{{ . | urlize }}">{{ . }}</a>,{{ end }}
+			series:[ {{ range $page.Params.series }}<a href="{{ $baseurl }}/series/{{ . | urlize }}">{{ . }}</a> {{ end }}]
 			{{ end }}
 
 		  </p>

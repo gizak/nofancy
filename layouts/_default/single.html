@@ -6,21 +6,22 @@
 	<div class="eight columns offset-by-two">
 	  <div id="post-title">
 		<p class="footnote">
-		  <time class="pull-right post-list">{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}</time>
+		  <!--<time class="pull-right post-list">{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}</time>-->
+		  <time class="">{{ .Date.Format "2006-01-02" }}</time>
 		  {{ $baseurl := .Site.BaseUrl }}
 		  {{ if or .Params.tags .Params.categories .Params.series }}
-		  @
+		  |
 		  {{ end }}
 		  {{ if isset .Params "tags" }}
-		  /tags/{{ range .Params.tags }}<a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a>,{{ end }}
+		  tags:{{ range .Params.tags }}<a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a> {{ end }}
 		  {{ end }}
 
 		  {{ if isset .Params "categories" }}
-		  /categories/{{ range .Params.categories }}<a href="{{ $baseurl }}/categories/{{ . | urlize }}">{{ . }}</a>,{{ end }}
+		  categories:{{ range .Params.categories }}<a href="{{ $baseurl }}/categories/{{ . | urlize }}">{{ . }}</a> {{ end }}
 		  {{ end }}
 
 		  {{ if isset .Params "series" }}
-		  /series/{{ range .Params.series }}<a href="{{ $baseurl }}/series/{{ . | urlize }}">{{ . }}</a>,{{ end }}
+		  series:{{ range .Params.series }}<a href="{{ $baseurl }}/series/{{ . | urlize }}">{{ . }}</a> {{ end }}
 		  {{ end }}
 
 		</p>
