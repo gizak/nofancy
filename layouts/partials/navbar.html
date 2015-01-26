@@ -11,7 +11,7 @@
 	  <div class="eight columns offset-by-two">
 		<ul class="">
 		  {{ $burl := .Site.BaseUrl }}
-		  <li class="u-pull-left"> <a href="/" class="brand" style="font-weight:bold;font-size:normal"> {{ .Site.Title }} </a></li>
+		  <li class="u-pull-left"> <a href="{{ $burl }}" class="brand" style="font-weight:bold;font-size:normal"> {{ .Site.Title }} </a></li>
 		  <li class="u-pull-right cate"> <a href="{{ $burl }}/about/" class=""> About </a></li>
 		  {{ range $name, $pages := .Site.Taxonomies.categories }}
 		  <li class="u-pull-right cate"> <a href="{{ $burl }}/categories/{{ $name | urlize }}" class=""> {{ $name | title }} </a></li>
