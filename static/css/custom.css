@@ -37,6 +37,8 @@ html {
 	margin-right:10px;
 	margin-bottom: 0;
 	top:50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
 
@@ -93,15 +95,14 @@ html {
 .post {
 	z-index:9;
 	display:block;
-	font-family: 'Open Sans', 'Clear Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color:rgba(0,0,0,0.78);
+	font-family: proxima-nova,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+	color:#484848;
 	overflow:auto;
 	padding:0;
 	padding-bottom:1em;
 	padding-top:1em;
 	font-size:16px;
 	line-height:25px;
-	-webkit-font-smoothing: antialiased;
 }
 
 .post h1 {
@@ -146,7 +147,7 @@ html {
 #post-title h5 {
 	font-weight:bold;
 	font-family: 'Open Sans', 'Clear Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color:rgba(0, 0, 0,0.78);
+	color:#2d2d2d;
 	letter-spacing:normal;
 }
 
