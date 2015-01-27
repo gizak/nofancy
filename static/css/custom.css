@@ -8,8 +8,8 @@ html {
 	position:relative;
 }
 
-.body {
-	margin-bottom:2em;
+body {
+	background-color: rgb(249,249,249);
 }
 
 .navbar {
@@ -82,6 +82,11 @@ html {
 	color: #888 !important
 }
 
+.footnote a:hover{
+	text-decoration:underline;
+	color:#369;
+}
+
 .footer {
 	position:absolute;
 	z-index:2;
@@ -103,6 +108,16 @@ html {
 	padding-top:1em;
 	font-size:16px;
 	line-height:25px;
+}
+
+.post a {
+	color:#c05b4d;
+	text-decoration: none;
+}
+
+.post a:hover {
+	color:#a5473a;
+	text-decoration: underline;
 }
 
 .post h1 {
@@ -165,6 +180,8 @@ html {
 		margin-bottom:5px;
 		margin-right:0;
 		transform: translateY(0);
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
 	}
 
 	.navbar ul {
