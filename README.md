@@ -5,11 +5,14 @@ Yet another [Hugo](http://hugo.spf13.com) blog theme made by love. It tries to u
 
 ### Snapshots
 
-list view:
-![list](images/snapshot.png)
+List view:
+![list](https://raw.githubusercontent.com/gizak/nofancy/master/images/snapshot.png)
 
-content view:
-![content](images/tn.png)
+Content view:
+![content](https://raw.githubusercontent.com/gizak/nofancy/master/images/tn.png)
+
+Mobile devices
+![mobile](https://raw.githubusercontent.com/gizak/nofancy/master/images/mobile.png)
 
 ### Basic ideas
 
@@ -17,15 +20,13 @@ Are you tired of all that emerging design concepts like flat or material? Are yo
 
 Some ideas behind this:
 
-1. If it is not (or almost not) needed, get rid of it.
+1. Do subtraction instead of addition.
 
-2. The blog's content matters.
+2. The blog's content matters (SNS things then after).
 
-3. The SNS thing shall not appears before blog contents.
+3. Clean, high readability and mobile-friendly.
 
-4. Clean and mobile-friendly.
-
-5. Has the ability to sort contents by categories, tags, series.
+4. Full stack support (sorting contents by categories, tags, series; Google Analytics; SNS & email links...)
 
 
 ### Config
@@ -41,9 +42,14 @@ copyright = "Copyright (c) 2008 - 2014, Steve Francia; all rights reserved."
 [author]
     name = "Steve Francia"
     github = "spf13"
-
+    linkedin = "YOUR LINKEDIN ID"
+    facebook = "YOUR FB ID"
+    gaID = "YOUR Google Analytics Tracking ID"
+    twitter = "YOUR TWITTER ID"
 ```
 
 All your personal information is in `author` section. it also support SNS links including github, twitter, linkedin, facebook (just fill in your user id).
 
-### You are ready to go!
+There is a fixed About page link on the top navbar which will bring user to your aboutme page. Just use `hugo new about` to write something about yourself!
+
+__You are ready to go!__
