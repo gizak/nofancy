@@ -2,7 +2,12 @@
   <div class="container">
 	<div class="row">
 	  <div class="ten columns offset-by-two">
-		<p class="footnote">Copyright: All rights reserved by <a href="mailto:{{ .Site.Author.email }}">@{{ .Site.Author.name }}</a>.
+		<p class="footnote">
+		  {{ if .Site.Copyright }}
+		  {{ .Site.Copyright }}
+		  {{ else }}
+		  Copyright: All rights reserved by <a href="mailto:{{ .Site.Author.email }}">@{{ .Site.Author.name }}</a>.
+		  {{ end }}
 		  {{ if or .Site.Author.github .Site.Author.twitter .Site.Author.facebook .Site.Author.linkedin }}
 		  Find me at
 
