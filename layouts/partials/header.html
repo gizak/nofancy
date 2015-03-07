@@ -1,25 +1,31 @@
 <html lang="en">
 <head>
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- Basic Page Needs –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>{{ .Title }}</title>
   <meta name="description" content="{{ .Title }}">
   <meta name="author" content="{{ .Site.Author.name }}">
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- Mobile Specific Metas –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- FONT –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- CSS –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/fonts.css">
   <link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/normalize.css">
   <link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/skeleton.css">
   <link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/custom.css">
+
+  <!--- highlight js ------------------------------------------------------------->
+  {{ if .Site.Params.highlight }}
+  <link rel="stylesheet" href="{{ .Site.BaseUrl }}/highlight/styles/{{ .Site.Params.highlight }}.css">
+  {{ else }}
+  <link rel="stylesheet" href="{{ .Site.BaseUrl }}/highlight/styles/default.css">
+  {{ end }}
+  <script src="{{ .Site.BaseUrl }}/highlight/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
 </head>
 <body>
