@@ -6,13 +6,16 @@ Yet another [Hugo](http://hugo.spf13.com) blog theme made by love. It tries to u
 ### Snapshots
 
 List view:
-![list](https://raw.githubusercontent.com/gizak/nofancy/master/images/snapshot.png)
+
+<img src="https://raw.githubusercontent.com/gizak/nofancy/master/images/list.png" width="800">
 
 Content view:
-![content](https://raw.githubusercontent.com/gizak/nofancy/master/images/tn.png)
+
+<img src="https://raw.githubusercontent.com/gizak/nofancy/master/images/content.png" width="800">
 
 Mobile devices
-![mobile](https://raw.githubusercontent.com/gizak/nofancy/master/images/mobile.png)
+
+<img src="https://raw.githubusercontent.com/gizak/nofancy/master/images/mobile.png" width="400">
 
 ### Basic ideas
 
@@ -28,6 +31,8 @@ Some ideas behind this:
 
 4. Full stack support (sorting contents by categories, tags, series; Google Analytics; SNS & email links...)
 
+### Syntax highlight
+Use [GitHub flavoured markdown](https://help.github.com/articles/github-flavored-markdown/#syntax-highlighting) to write your code snippets in posts, it will auto highlighted after running `hugo`.
 
 ### Config
 
@@ -36,8 +41,11 @@ Note that only posts in content/post will be displayed and the author setting in
 ```toml
 baseurl = "http://hugo.spf13.com/"
 title = "Hugo Themes"
-#author = "Steve Francia"
+#if not set copyright, default copyright template will be applied
 copyright = "Copyright (c) 2008 - 2014, Steve Francia; all rights reserved."
+
+[params]
+	highlight="Assign a syntax highlight style"
 
 [author]
     name = "Steve Francia"
