@@ -1,8 +1,7 @@
-<div class="footer">
-  <div class="container">
-	<div class="row">
-	  <div class="ten columns offset-by-two">
-		<p class="footnote">
+<div class="footer pure-g">
+    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+    <div class="pure-u-11-12 pure-u-md-5-8">
+        <p class="footnote">
 		  {{ if .Site.Copyright }}
 		  {{ .Site.Copyright }}
 		  {{ else }}
@@ -30,25 +29,27 @@
 		  {{ end }}
 		</p>
 	  </div>
-	</div>
-  </div>
+      <div class="pure-u-1-24 pure-u-md-1-6"></div>
 </div>
 
 
-<script src="{{ .Site.BaseUrl }}/js/jquery.min.js" type="text/javascript"></script>
-<script src="{{ .Site.BaseUrl }}/js/jquery.timeago.js" type="text/javascript"></script>
+<script src="{{ .Site.BaseUrl }}js/jquery.min.js" type="text/javascript"></script>
+<script src="{{ .Site.BaseUrl }}js/jquery.timeago.js" type="text/javascript"></script>
 <script type="text/javascript">
   $(function(){
     $("time.timeago").timeago();
   })
-  $("#menu").click(function(){
-    $(".brand").text("HOME");
-    $(".navbar ul li").removeClass("cate");
-    $(".navbar").toggle();
+  $("#toggle-btn").click(function(){
+    $("#toggle-content").toggle();
+    if($(this).html() === "☰") {
+        $(this).html("X")
+    } else {
+        $(this).html("☰")
+    }
   });
   $(window).resize(function(){
     if(window.innerWidth > 768) {
-      $(".navbar").removeAttr("style");
+      $(".desktop").removeAttr("style");
     }
   });
 </script>

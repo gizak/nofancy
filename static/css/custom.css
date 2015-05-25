@@ -1,7 +1,8 @@
+/*
 footer {
 	display:block;
 }
-
+*/
 html {
 	min-height:100%;
 	width:100%;
@@ -10,59 +11,54 @@ html {
 
 body {
 	background-color: rgb(249,249,249);
+	color: #484848;
 }
 
-.navbar {
-	top:0;
-	left:0;
-	display:block;
-	border-bottom: 1px solid #eee;
-	margin-bottom:10px;
-	height:2em;
-	width:100%;
+.nav-menu {
+	box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
 }
 
-.navbar ul {
-	list-style-type:none;
-	display: block;
-	margin:0;
-	padding:0;
-	overflow:hidden;
-	height:100%;
+.header {
+	text-align: left;
+	max-height: 2em;
+	color: #484848;
+	margin-bottom: 2em;
 }
 
-.navbar li {
-	display: inline-block;
-	position: relative;
-	margin-right:10px;
-	margin-bottom: 0;
-	top:50%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
+.header .desktop ul {
+	float: right;
 }
 
-.navbar a {
-	color:#333;
-	text-transform:uppercase;
-	text-decoration:none;
-	font-size:bold;
+.header ul li a {
+	font-weight: bold;
+	color: #484848;
+	font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.brand {
-	font-weight:bold;
-	font-size:normal !important;
+.header .site-title {
+	font-weight: bold;
+	color: #484848;
+	font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.cate {
-	font-weight:bold;
-	font-size:small;
+.pull-right {
+	float: right;
 }
 
+.posts-name {
+	text-transform: capitalize;
+	font-weight: bold;
+	font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
 .posts {
 	font-family: verdana,arial,helvetica,sans-serif;
 	list-style-type:none;
+	padding-left: 1em;
+}
+
+.posts-name {
+	padding-left: 1em;
 }
 
 .posts li a {
@@ -98,14 +94,23 @@ body {
 }
 
 .post {
-	z-index:9;
-	display:block;
 	font-family: proxima-nova,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
 	color:#484848;
+	letter-spacing:normal;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+.post h1,h2,h3,h4,h5,h6 {
+	font-weight: bold;
+	letter-spacing:normal;
+}
+
+.post-content {
+	z-index:9;
 	overflow:auto;
 	padding:0;
 	padding-bottom:1em;
-	padding-top:1em;
 	font-size:16px;
 	line-height:25px;
 }
@@ -122,115 +127,72 @@ body {
 
 .post h1 {
 	font-size:28px;
-	font-weight: bold;
-	color:#2d2d2d;
-	letter-spacing:normal;
 }
 
 .post h2 {
 	font-size:25px;
-	font-weight: bold;
-	color:#2d2d2d;
-	letter-spacing:normal;
 }
 
 .post h3 {
 	font-size:23px;
-	font-weight: bold;
-	color:#2d2d2d;
-	letter-spacing:normal;
 }
 
 .post h4 {
 	font-size:21px;
-	font-weight: boldl;
-	color:#2d2d2d;
-	letter-spacing:normal;
 }
 
 .post h5 {
 	font-size:19px;
-	font-weight: bold;
-	color:#2d2d2d;
-	letter-spacing:normal;
 }
 
 .post h6 {
 	font-size:18px;
-	font-weight: bold;
-	color:#2d2d2d;
-	letter-spacing:normal;
 }
 
-.away {
-	margin-top:2em;
+.post-title{
+		margin-top: 1em;
+		margin-bottom: 1em;
 }
 
-
-.post-wrapper {
-	margin-top:2em;
-}
-
-#post-title h5 {
+.post-title h1 {
 	font-weight:bold;
-	font-family: proxima-nova, 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-	color:#2d2d2d;
-	font-size:35px;
-	letter-spacing:normal;
+	font-size:39px;
+	line-height: 40px;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 
 @media screen and (max-width:767px){
-	.navbar {
-		display:none;
-		overflow:visible;
-		height:auto;
+	.desktop {
+		display: none;
 	}
-
-	.navbar li {
-		width:100%;
-		clear:both;
-		margin-bottom:5px;
-		margin-right:0;
-		transform: translateY(0);
-		-webkit-transform: translateY(0);
-		-ms-transform: translateY(0);
+	.mobile {
+		display: block;
 	}
-
-	.navbar ul {
-		height:auto;
-		overflow:auto;
+	#toggle-btn {
+		display: inline-block;
+		float: right;
+		padding: .5em 1em;
+		text-decoration: none;
+		color: #484848;
+		font-weight: bold;
 	}
-
-	.navbar .brand {
-		font-weight:normal !important;
+	#toggle-content li {
+		clear: both;
+		height: auto;
+		background-color: rgb(249,249,249);
 	}
-
-	#menu {
-		text-align:center;
-		display:block;
-		padding:0;
-		margin-bottom:10px;
-		height:1.5em;
-		padding-bottom:4px;
-		border-bottom: 1px solid #eee;
-	}
-
-	#menu a {
-		float:right;
-		cursor:pointer;
-		font-size:large;
-	}
-
-	#menu span {
-		float:left;
-		text-transform:uppercase;
-		font-weight:bold;
+	#toggle-home {
+		display: inline-block;
 	}
 }
 
 @media screen and (min-width:768px){
-	#menu {
+	.mobile {
 		display:none;
+	}
+	.desktop {
+		display: block;
 	}
 }
