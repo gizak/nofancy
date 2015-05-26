@@ -178,8 +178,8 @@ body {
 }
 
 .post-title{
-		margin-top: .5em;
-		margin-bottom: 1em;
+		margin-top: 0;
+		margin-bottom: 2em;
 }
 
 .post-title h1 {
