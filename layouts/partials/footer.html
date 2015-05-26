@@ -1,33 +1,43 @@
 <div class="footer pure-g">
     <div class="pure-u-1-24 pure-u-md-5-24"></div>
     <div class="pure-u-11-12 pure-u-md-5-8">
-        <p class="footnote">
-		  {{ if .Site.Copyright }}
-		  {{ .Site.Copyright }}
-		  {{ else }}
-		  Copyright: All rights reserved by <a href="mailto:{{ .Site.Author.email }}">@{{ .Site.Author.name }}</a>.
-		  {{ end }}
-		  {{ if or .Site.Author.github .Site.Author.twitter .Site.Author.facebook .Site.Author.linkedin }}
-		  Find me at
+        <div class="pure-menu pure-menu-horizontal footer-content">
+            <ul>
+                <li class="pure-menu-heading" id="foot-name">{{ .Site.Author.name }}:</li>
 
-		  {{ if .Site.Author.github }}
-		  <a href="https://github.com/{{ .Site.Author.github }}" >GitHub</a>
-		  {{ end }}
+                {{ if .Site.Author.email }}
+                <li class="pure-menu-item">
+                    <a href="mailto:{{ .Site.Author.email }}" class="pure-menu-link">Email</a>
+                </li>
+                {{ end }}
 
-		  {{ if .Site.Author.facebook }}
-		  <a href="https://www.facebook.com/{{ .Site.Author.facebook }}">Facebook</a>
-		  {{ end }}
+                {{ if .Site.Author.github }}
+                <li class="pure-menu-item">
+                    <a href="https://github.com/{{ .Site.Author.github }}" class="pure-menu-link">GitHub</a>
+                </li>
+                {{ end }}
 
-		  {{ if .Site.Author.twitter }}
-		  <a href="https://twitter.com/{{ .Site.Author.twitter }}">Twitter</a>
-		  {{ end }}
+                {{ if .Site.Author.linkedin }}
+                <li class="pure-menu-item">
+                    <a href="https://www.linkedin.com/in/{{ .Site.Author.linkedin }}" class="pure-menu-link">LinkedIn</a>
+                </li>
+                {{ end }}
 
-		  {{ if .Site.Author.linkedin }}
-		  <a href="https://www.linkedin.com/in/{{ .Site.Author.linkedin }}">Linkedin</a>
-		  {{ end }}
+                {{ if .Site.Author.facebook }}
+                <li class="pure-menu-item">
+                    <a href="https://www.facebook.com/{{ .Site.Author.facebook }}" class="pure-menu-link">Facebook</a>
+                </li>
+                {{ end }}
 
-		  {{ end }}
-		</p>
+                {{ if .Site.Author.twitter }}
+                <li class="pure-menu-item">
+                    <a href="https://twitter.com/{{ .Site.Author.twitter }}" class="pure-menu-link">Twitter</a>
+                </li>
+                {{ end }}
+
+            </ul>
+            <a href="#" class="pure-menu-heading pull-right" id="gototop-btn">↑↑</a>
+        </div>
 	  </div>
       <div class="pure-u-1-24 pure-u-md-1-6"></div>
 </div>

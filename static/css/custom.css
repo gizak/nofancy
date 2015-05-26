@@ -15,18 +15,21 @@ body {
 }
 
 .nav-menu {
-	box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+	/*box-shadow: 0 1px 1px rgba(0,0,0, 0.10);*/
+	border-bottom: 1px solid #e3e3e3;
 }
 
 .header {
 	text-align: left;
-	max-height: 2em;
 	color: #484848;
 	margin-bottom: 2em;
 }
 
 .header .desktop ul {
 	float: right;
+}
+.header ul li {
+		height: auto;
 }
 
 .header ul li a {
@@ -48,16 +51,14 @@ body {
 .posts-name {
 	text-transform: capitalize;
 	font-weight: bold;
+	padding-left: 1em;
+	margin-top: 0;
 	font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .posts {
 	font-family: verdana,arial,helvetica,sans-serif;
 	list-style-type:none;
-	padding-left: 1em;
-}
-
-.posts-name {
 	padding-left: 1em;
 }
 
@@ -86,19 +87,46 @@ body {
 .footer {
 	position:absolute;
 	z-index:2;
-	border-top: 1px solid #eee;
-	height:1.5em;
+	height:auto;
 	width:100%;
 	bottom:0;
-	padding-top:0.1em;
+}
+
+
+.footer-content {
+	border-top: 1px solid #e3e3e3;
+}
+
+.footer-content a {
+	font-size: 80%;
+	color: #bbb;
+}
+
+.footer-content ul {
+	height: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	display: inline-block;
+	padding-left: 0;
+}
+
+#gototop-btn {
+	display: inline-block;
+	color: #bbb;
+	font-size: 80%;
+}
+
+#foot-name {
+	text-transform: none;
+	font-size: 80%;
+	color: #bbb;
 }
 
 .post {
 	font-family: proxima-nova,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
 	color:#484848;
 	letter-spacing:normal;
-	padding-left: 0.5em;
-	padding-right: 0.5em;
+	padding-left: .5em;
 }
 
 .post h1,h2,h3,h4,h5,h6 {
@@ -110,9 +138,9 @@ body {
 	z-index:9;
 	overflow:auto;
 	padding:0;
-	padding-bottom:1em;
+	padding-bottom:3em;
 	font-size:16px;
-	line-height:25px;
+	line-height:1.4;
 }
 
 .post a {
@@ -150,7 +178,7 @@ body {
 }
 
 .post-title{
-		margin-top: 1em;
+		margin-top: .5em;
 		margin-bottom: 1em;
 }
 
