@@ -22,7 +22,7 @@ body {
 .header {
 	text-align: left;
 	color: #484848;
-	margin-bottom: 2em;
+	margin-bottom: .5em;
 }
 
 .header .desktop ul {
@@ -52,7 +52,7 @@ body {
 	text-transform: capitalize;
 	font-weight: bold;
 	padding-left: 1em;
-	margin-top: 0;
+	margin-top: 1em;
 	font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -60,6 +60,14 @@ body {
 	font-family: verdana,arial,helvetica,sans-serif;
 	list-style-type:none;
 	padding-left: 1em;
+}
+
+.posts ul li p{
+	margin-top: 0;
+}
+
+.posts ul li {
+	margin-bottom: 1em;
 }
 
 .posts li a {
