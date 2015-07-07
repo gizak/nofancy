@@ -15,7 +15,7 @@
       <div class="pure-u-1-24 pure-u-md-1-6"></div>
 	  <div class="pure-u-11-12 pure-u-md-2-3">
 		<ul class="">
-		  {{ $burl := .Site.BaseUrl }}
+		  {{ $burl := .Site.BaseURL }}
 		  <li class=""> <a href="{{ $burl }}" class="brand" style="font-weight:bold;font-size:normal"> {{ .Site.Title }} </a></li>
 		  <li class="pull-right cate"> <a href="{{ $burl }}about/" class=""> About </a></li>
 		  {{ range $name, $pages := .Site.Taxonomies.categories }}
@@ -31,7 +31,7 @@
     <div class="pure-u-1-24 pure-u-md-5-24"></div>
     <div class="pure-u-11-12 pure-u-md-5-8">
         <div class="desktop pure-menu pure-menu-horizontal nav-menu">
-            {{ $baseurl := .Site.BaseUrl }}
+            {{ $baseurl := .Site.BaseURL }}
             <a href="/" class="site-title pure-menu-heading">{{ .Site.Title }}</a>
             <ul class="pure-menu-list">
                 {{ range $name,$page := .Site.Taxonomies.categories }}
@@ -48,14 +48,14 @@
             <a href="/" class="pure-menu-heading" id="toggle-home">{{ .Site.Title }}</a>
             <a href="#" id="toggle-btn">&#9776;</a>
             <ul class="pure-menu-list" id="toggle-content" style="display:none;">
-                {{ $baseurl := .Site.BaseUrl }}
+                {{ $baseurl := .Site.BaseURL }}
                 {{ range $name,$page := .Site.Taxonomies.categories }}
                 <li class="pure-menu-item">
                     <a href="{{ $baseurl }}categories/{{ $name | urlize }}" class="pure-menu-link">{{ $name | title }}</a>
                 </li>
                 {{ end }}
                 <li class="pure-menu-item">
-                    <a href="{{ .Site.BaseUrl }}about" class="pure-menu-link">About</a>
+                    <a href="{{ .Site.BaseURL }}about" class="pure-menu-link">About</a>
                 </li>
             </ul>
         </div>

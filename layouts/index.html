@@ -7,8 +7,8 @@
 	  <p class="posts-name">Recent posts:</p>
 
 	  <ul class="posts">
-		{{ $baseurl := .Site.BaseUrl }}
-		{{ range $name, $page := .Site.Recent }}
+		{{ $baseurl := .Site.BaseURL }}
+		{{ range $name, $page := .Site.Pages }}
 		{{ if eq .Type "post" }}
 		<li>
 		  <a href="{{ .Permalink }}">{{ $page.Title }}</a>

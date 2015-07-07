@@ -8,7 +8,7 @@
 	  <p class="posts-name">{{ .Title }}:</p>
 
 	  <ul class="posts">
-		{{ $baseurl := .Site.BaseUrl }}
+		{{ $baseurl := .Site.BaseURL }}
 		{{ range $name, $page := .Data.Pages }}
 		{{ if eq .Type "post" }}
 		<li>
