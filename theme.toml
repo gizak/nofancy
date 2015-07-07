@@ -5,7 +5,7 @@ licenselink = "http://opensource.org/licenses/MIT"
 homepage = "https://github.com/gizak/nofancy"
 tags = ["blog", "personal"]
 features = ["distraction-free","black-and-white"]
-min_version=0.12
+min_version=0.14
 
 [author]
     name = "Zack Guo"
