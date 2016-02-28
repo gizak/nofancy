@@ -32,7 +32,7 @@
     <div class="pure-u-11-12 pure-u-md-5-8">
         <div class="desktop pure-menu pure-menu-horizontal nav-menu">
             {{ $baseurl := .Site.BaseURL }}
-            <a href="/" class="site-title pure-menu-heading">{{ .Site.Title }}</a>
+            <a href="{{$baseurl}}" class="site-title pure-menu-heading">{{ .Site.Title }}</a>
             <ul class="pure-menu-list">
                 {{ range $name,$page := .Site.Taxonomies.categories }}
                 <li class="pure-menu-item">
