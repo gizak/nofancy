@@ -1,0 +1,39 @@
+{
+  "name": "nofancy",
+  "version": "1.0.0",
+  "description": "Yet another [Hugo](http://hugo.spf13.com) blog theme made by love. It tries to use less design to provide full functionalities.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack -p",
+    "test": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gizak/nofancy.git"
+  },
+  "keywords": [
+    "hugo",
+    "theme",
+    "blog"
+  ],
+  "author": "gizak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gizak/nofancy/issues"
+  },
+  "homepage": "https://github.com/gizak/nofancy#readme",
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "gulp": "^3.9.1",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.12.15"
+  },
+  "dependencies": {
+    "npm-zepto": "^1.1.7",
+    "prismjs": "^1.4.1",
+    "purecss": "^0.6.0",
+    "timeago": "^1.5.2"
+  }
+}
