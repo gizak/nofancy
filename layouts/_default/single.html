@@ -1,43 +1,38 @@
-{{ partial "header.html" . }}
+{{ partial "header.html" . }} 
 {{ partial "navbar.html" . }}
+{{ $baseurl := .Site.BaseURL }}
 
-<div class="pure-g">
-    <div class="pure-u-1-24 pure-u-md-5-24"></div>
-	<div class="pure-u-11-12 pure-u-md-5-8">
-        <div class="post">
-
-            <div class="post-title">
-                <p class="footnote">
-                    <time class="">{{ .Date.Format "2006-01-02" }}</time>
-		            {{ $baseurl := .Site.BaseURL }}
-                    {{ if or .Params.tags .Params.categories .Params.series }}
-                    |
-                    {{ end }}
-                    {{ if isset .Params "tags" }}
-                    tags:{{ range .Params.tags }}<a href="{{ $baseurl }}tags/{{ . | urlize }}">{{ . }}</a> {{ end }}
-                    {{ end }}
-
-                    {{ if isset .Params "categories" }}
-                    categories:{{ range .Params.categories }}<a href="{{ $baseurl }}categories/{{ . | urlize }}">{{ . }}</a> {{ end }}
-                    {{ end }}
-
-                    {{ if isset .Params "series" }}
-                    series:{{ range .Params.series }}<a href="{{ $baseurl }}series/{{ . | urlize }}">{{ . }}</a> {{ end }}
-                    {{ end }}
-                </p>
-                <h1>{{ .Title }}</h1>
-            </div>
-
-            <div class="post-content">
-                {{ .Content }}
-            </div>
+<div class="pure-g center-box">
+    <article class="pure-u-11-12 pure-u-md-5-8 post">
+        <aside class="footnote">
+            <time class="">{{ .Date.Format "2006-01-02" }}</time> 
+            
+            {{ if or .Params.tags .Params.categories .Params.series }} | {{ end }} 
+            
+            {{ if isset .Params "tags" }} 
+            tags:{{ range .Params.tags }}<a href="{{ $baseurl }}tags/{{ . | urlize }}">{{ . }}</a> {{ end }} 
+            {{ end }} 
+            
+            {{ if isset .Params "categories" }} 
+            categories:{{ range .Params.categories }}<a href="{{ $baseurl }}categories/{{ . | urlize }}">{{ . }}</a> {{ end }} 
+            {{ end }} 
+            
+            {{ if isset .Params "series" }} series:{{ range .Params.series }}<a href="{{ $baseurl }}series/{{ . | urlize }}">{{ . }}</a>{{ end }} 
+            {{ end }}
+        </aside>
+        <header class="post-title">
+            <h1>{{ .Title }}</h1>
+        </header>
+        {{ .TableOfContents }}
+        <div class="post-content">
+            {{ .Content }}
         </div>
-	</div>
-    <div class="pure-u-1-24 pure-u-md-1-6"></div>
+    </article>
 </div>
 
 {{ partial "footer.html" . }}
 
-<script src="js/single.bundle.js"></script>
+<script src="{{ .Site.BaseURL }}/js/single.bundle.js"></script>
 </body>
+
 </html>

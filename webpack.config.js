@@ -1,6 +1,7 @@
 var path = require("path");
 
 module.exports = {
+    target: 'web',
     entry: {
         list: './src/list.js',
         single: './src/single.js'
