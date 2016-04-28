@@ -1,9 +1,12 @@
-html {
+body {
     font-family: "source-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #484c55;
     line-height: 1.5;
     font-size: 16px;
     text-rendering: optimizelegibility;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
     
     a {
         color: rgb(38, 87, 120);
@@ -20,6 +23,7 @@ html {
 
 div.center-box {
     display: flex;
+    flex: 1;
     height: auto;
     justify-content: center;        
 }
@@ -42,10 +46,12 @@ footer{
             text-decoration: none; 
         }
     
-        border-top-style: solid;
-        border-top-color: rgb(238,238,238);
-        border-top-width: 1px;
-       
+        border: 1px solid rgb(238,238,238);
+        border-bottom: none;
+        border-radius: .5em;
+        border-top-left-radius: .2em;
+        border-top-right-radius: .2em;
+          
         a.pure-menu-heading {
             display: inline-block;
         }
@@ -67,9 +73,10 @@ header.navbar {
     
     nav {
         height: 2.5em;
-        border-bottom-style: solid;
-        border-bottom-color: rgb(238,238,238);
-        border-bottom-width: 1px;
+        border: 1px solid rgb(238,238,238);
+        border-top: none;
+        border-bottom-left-radius: .2em;
+        border-bottom-right-radius: .2em;
         
         #toggle-btn {
             display: none;

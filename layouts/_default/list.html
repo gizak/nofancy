@@ -1,49 +1,30 @@
-{{ partial "header.html" . }}
-{{ partial "navbar.html" . }}
+{{ partial "header.html" . }} {{ partial "navbar.html" . }}
 
 
-<div class="pure-g">
-    <div class="pure-u-1-24 pure-u-md-5-24"></div>
+<div class="pure-g content-box">
 	<div class="pure-u-11-12 pure-u-md-5-8">
-	  <p class="posts-name">{{ .Title }}:</p>
+		<p class="posts-name">{{ .Title }}:</p>
 
-	  <ul class="posts">
-		{{ $baseurl := .Site.BaseURL }}
-		{{ range $name, $page := .Data.Pages }}
-		{{ if eq .Type "post" }}
-		<li>
-		  <a href="{{ .Permalink }}">{{ $page.Title }}</a>
+		<ul class="posts">
+			{{ $baseurl := .Site.BaseURL }} {{ range $name, $page := .Data.Pages }} {{ if eq .Type "post" }}
+			<li>
+				<a href="{{ .Permalink }}">{{ $page.Title }}</a>
 
-		  <p class="footnote">
-			submitted <time datetime="{{ $page.Date.Format "2006-01-02T15:04:05Z07:00" }}" class="post-list timeago">{{ $page.Date.Format "2006-01-02T15:04:05Z07:00" }}</time>
+				<p class="footnote">
+					submitted <time datetime="{{ $page.Date.Format " 2006-01-02T15:04:05Z07:00 " }}" class="post-list timeago">{{ $page.Date.Format "2006-01-02T15:04:05Z07:00" }}</time>					{{ if or $page.Params.tags $page.Params.categories $page.Params.series }} to {{ end }} {{ with $page.Params.tags }}
+					tags:[ {{ range $page.Params.tags}}<a href="{{ $baseurl }}tags/{{ . | urlize }}">{{ . }}</a> {{ end }}] {{ end }} {{
+					with $page.Params.categories }} categories:[ {{ range $page.Params.categories }}<a href="{{ $baseurl }}categories/{{ . | urlize }}">{{ . }}</a>					{{ end }}] {{ end }} {{ with $page.Params.series }} series:[ {{ range $page.Params.series }}<a href="{{ $baseurl }}series/{{ . | urlize }}">{{ . }}</a>					{{ end }}] {{ end }}
 
-			{{ if or $page.Params.tags $page.Params.categories $page.Params.series }}
-			to
-			{{ end }}
-
-			{{ with $page.Params.tags }}
-			tags:[ {{ range $page.Params.tags}}<a href="{{ $baseurl }}tags/{{ . | urlize }}">{{ . }}</a> {{ end }}]
-			{{ end }}
-
-			{{ with $page.Params.categories }}
-			categories:[ {{ range $page.Params.categories }}<a href="{{ $baseurl }}categories/{{ . | urlize }}">{{ . }}</a> {{ end }}]
-			{{ end }}
-
-			{{ with $page.Params.series }}
-			series:[ {{ range $page.Params.series }}<a href="{{ $baseurl }}series/{{ . | urlize }}">{{ . }}</a> {{ end }}]
-			{{ end }}
-
-		  </p>
-		</li>
-		{{ end }}
-		{{ end }}
-	  </ul>
+				</p>
+			</li>
+			{{ end }} {{ end }}
+		</ul>
 	</div>
-    <div class="pure-u-1-24 pure-u-md-1-6"></div>
 </div>
 
 {{ partial "footer.html" . }}
 
 <script src="{{ .Site.BaseURL }}/js/single.bundle.js"></script>
 </body>
+
 </html>
