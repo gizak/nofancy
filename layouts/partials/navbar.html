@@ -5,11 +5,13 @@
             {{ $baseurl := .Site.BaseURL }}
             <a href="{{$baseurl}}" class="site-title pure-menu-heading">{{ .Site.Title }}</a>
             <ul class="pure-menu-list">
+				{{ if eq .Site.Params.topmenu "categories" }}
                 {{ range $name,$page := .Site.Taxonomies.categories }}
                 <li class="pure-menu-item">
                     <a href="{{ $baseurl }}categories/{{ $name | urlize }}" class="pure-menu-link">{{ $name | title }}</a>
                 </li>
                 {{ end }}
+				{{ end }}
                 <li class="pure-menu-item">
                     <a href="{{ $baseurl }}about/" class="pure-menu-link">About</a>
                 </li>
@@ -20,11 +22,13 @@
             <a href="#" id="toggle-btn">&#9776;</a>
             <ul class="pure-menu-list" id="toggle-content" style="display:none;">
                 {{ $baseurl := .Site.BaseURL }}
+				{{ if eq .Site.Params.topmenu "categories" }}
                 {{ range $name,$page := .Site.Taxonomies.categories }}
                 <li class="pure-menu-item">
                     <a href="{{ $baseurl }}categories/{{ $name | urlize }}" class="pure-menu-link">{{ $name | title }}</a>
                 </li>
                 {{ end }}
+				{{ end }}
                 <li class="pure-menu-item">
                     <a href="{{ .Site.BaseURL }}about" class="pure-menu-link">About</a>
                 </li>

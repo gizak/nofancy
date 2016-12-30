@@ -46,7 +46,12 @@ copyright = "Copyright (c) 2008 - 2014, Steve Francia; all rights reserved."
 
 [params]
 	highlight="Assign a syntax highlight style"
-
+	
+	# Controls what items are listed in the top nav menu
+	# "none", or "categories"
+	# If you have too many categories to fit in the top nav menu, set this to "none"
+	topmenu="categories"
+	
 [author]
     name = "Steve Francia"
     github = "spf13"
