@@ -97,6 +97,8 @@ body {
 
 .footer-content {
 	border-top: 1px solid #e3e3e3;
+	font-size: 80%;
+	color: #bbb;
 }
 
 .footer-content a {
@@ -114,14 +116,16 @@ body {
 
 #gototop-btn {
 	display: inline-block;
-	color: #bbb;
-	font-size: 80%;
 }
 
 #foot-name {
 	text-transform: none;
-	font-size: 80%;
-	color: #bbb;
+}
+
+#foot-copyright {
+	padding-left: 1em;
+	padding-bottom: 0.5em;
+	margin: 0;
 }
 
 .post {
