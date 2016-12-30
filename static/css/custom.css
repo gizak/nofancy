@@ -19,9 +19,6 @@ body {
 	margin-bottom: .5em;
 }
 
-.header .desktop ul {
-	float: right;
-}
 .header ul li {
 		height: auto;
 }
