@@ -13,6 +13,9 @@
 		{{ range $name, $page := .Site.Pages }}
 		{{ if eq .Type "post" }}
 		<li>
+		  {{ if .Draft }}
+		  DRAFT: 
+		  {{ end }}
 		  <a href="{{ .Permalink }}">{{ $page.Title }}</a>
 
 		  <p class="footnote">
