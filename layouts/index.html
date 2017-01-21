@@ -4,6 +4,8 @@
 <div class="pure-g">
     <div class="pure-u-1-24 pure-u-md-5-24"></div>
 	<div class="pure-u-11-12 pure-u-md-5-8">
+	<div class="post-content">
+	{{ .Content }}
 	  <p class="posts-name">Recent posts:</p>
 
 	  <ul class="posts">
@@ -11,6 +13,9 @@
 		{{ range $name, $page := .Site.Pages }}
 		{{ if eq .Type "post" }}
 		<li>
+		  {{ if .Draft }}
+		  DRAFT: 
+		  {{ end }}
 		  <a href="{{ .Permalink }}">{{ $page.Title }}</a>
 
 		  <p class="footnote">
@@ -37,6 +42,7 @@
 		{{ end }}
 		{{ end }}
 	  </ul>
+	</div>
 	</div>
     <div class="pure-u-1-24 pure-u-md-1-6"></div>
 </div>

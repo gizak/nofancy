@@ -25,7 +25,7 @@
                     series:{{ range .Params.series }}<a href="{{ $baseurl }}series/{{ . | urlize }}">{{ . }}</a> {{ end }}
                     {{ end }}
                 </p>
-                <h1>{{ .Title }}</h1>
+                <h1>{{ if .Draft }}DRAFT: {{end}}{{ .Title }}</h1>
             </div>
 
             <div class="post-content">

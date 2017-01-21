@@ -1,43 +1,50 @@
 <div class="footer pure-g">
     <div class="pure-u-1-24 pure-u-md-5-24"></div>
     <div class="pure-u-11-12 pure-u-md-5-8">
-        <div class="pure-menu pure-menu-horizontal footer-content">
-            <ul>
-                <li class="pure-menu-heading" id="foot-name">{{ .Site.Author.name }}:</li>
-
-                {{ if .Site.Author.email }}
-                <li class="pure-menu-item">
-                    <a href="mailto:{{ .Site.Author.email }}" class="pure-menu-link">Email</a>
-                </li>
-                {{ end }}
-
-                {{ if .Site.Author.github }}
-                <li class="pure-menu-item">
-                    <a href="https://github.com/{{ .Site.Author.github }}" class="pure-menu-link">GitHub</a>
-                </li>
-                {{ end }}
-
-                {{ if .Site.Author.linkedin }}
-                <li class="pure-menu-item">
-                    <a href="https://www.linkedin.com/in/{{ .Site.Author.linkedin }}" class="pure-menu-link">LinkedIn</a>
-                </li>
-                {{ end }}
-
-                {{ if .Site.Author.facebook }}
-                <li class="pure-menu-item">
-                    <a href="https://www.facebook.com/{{ .Site.Author.facebook }}" class="pure-menu-link">Facebook</a>
-                </li>
-                {{ end }}
-
-                {{ if .Site.Author.twitter }}
-                <li class="pure-menu-item">
-                    <a href="https://twitter.com/{{ .Site.Author.twitter }}" class="pure-menu-link">Twitter</a>
-                </li>
-                {{ end }}
-
-            </ul>
-            <a href="#" class="pure-menu-heading pull-right" id="gototop-btn">↑↑</a>
-        </div>
+        <div class="footer-content">
+		  <div class="pure-menu pure-menu-horizontal">
+              <ul>
+			      {{ if .Site.Author.name }}
+                  <li class="pure-menu-heading" id="foot-name">{{ .Site.Author.name }}:</li>
+                  {{ end }}
+				  
+                  {{ if .Site.Author.email }}
+                  <li class="pure-menu-item">
+                      <a href="mailto:{{ .Site.Author.email }}" class="pure-menu-link">Email</a>
+                  </li>
+                  {{ end }}
+          
+                  {{ if .Site.Author.github }}
+                  <li class="pure-menu-item">
+                      <a href="https://github.com/{{ .Site.Author.github }}" class="pure-menu-link">GitHub</a>
+                  </li>
+                  {{ end }}
+          
+                  {{ if .Site.Author.linkedin }}
+                  <li class="pure-menu-item">
+                      <a href="https://www.linkedin.com/in/{{ .Site.Author.linkedin }}" class="pure-menu-link">LinkedIn</a>
+                  </li>
+                  {{ end }}
+          
+                  {{ if .Site.Author.facebook }}
+                  <li class="pure-menu-item">
+                      <a href="https://www.facebook.com/{{ .Site.Author.facebook }}" class="pure-menu-link">Facebook</a>
+                  </li>
+                  {{ end }}
+          
+                  {{ if .Site.Author.twitter }}
+                  <li class="pure-menu-item">
+                      <a href="https://twitter.com/{{ .Site.Author.twitter }}" class="pure-menu-link">Twitter</a>
+                  </li>
+                  {{ end }}
+          
+              </ul>
+              <a href="#" class="pure-menu-heading pull-right" id="gototop-btn">↑↑</a>
+          </div>
+		  {{ if .Site.Copyright }}
+		  <p id="foot-copyright">{{ .Site.Copyright | safeHTML }}</p>
+		  {{ end }}
+		</div>
 	  </div>
       <div class="pure-u-1-24 pure-u-md-1-6"></div>
 </div>
@@ -63,14 +70,14 @@
     }
   });
 </script>
-{{ if .Site.Author.gaID }}
+{{ if .Site.Author.gaid }}
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', '{{ .Site.Author.gaID }}', 'auto');
+  ga('create', '{{ .Site.Author.gaid }}', 'auto');
   ga('send', 'pageview');
 </script>
 {{ end }}
