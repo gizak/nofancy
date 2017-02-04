@@ -52,12 +52,18 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/2.0.4/timeago.min.js" integrity="sha256-34otvl+f6DWlliQUlAwT5hvizEJc8lPlNpW9T23pfGA=" crossorigin="anonymous"></script>
 <script type="text/javascript">
   new timeago().render(document.querySelectorAll('.timeago'));
-  
-//  $(window).resize(function(){
-//    if(window.innerWidth > 768) {
-//      $(".desktop").removeAttr("style");
-//    }
-//  });
+</script>
+<script type="text/javascript">
+go();
+window.addEventListener('resize', go);
+function go(){
+  var d=document.querySelector(".desktop")
+  if(document.documentElement.clientWidth > 768) {
+    b.style.display="";
+  } else {
+    b.style.display="none";
+  }
+}
 </script>
 <script type="text/javascript">var a=document.querySelector("#toggle-btn"),b=document.querySelector("#toggle-content");a.addEventListener("click",function(){""==b.style.display?(b.style.display="none",a.innerHTML="☰"):(b.style.display="",a.innerHTML="X")});</script>
 {{ if .Site.Author.gaid }}
