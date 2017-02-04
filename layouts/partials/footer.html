@@ -49,13 +49,10 @@
       <div class="pure-u-1-24 pure-u-md-1-6"></div>
 </div>
 
-
-<script src="{{ .Site.BaseURL }}js/jquery.min.js" type="text/javascript"></script>
-<script src="{{ .Site.BaseURL }}js/jquery.timeago.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/2.0.4/timeago.min.js" integrity="sha256-34otvl+f6DWlliQUlAwT5hvizEJc8lPlNpW9T23pfGA=" crossorigin="anonymous"></script>
 <script type="text/javascript">
-  $(function(){
-    $("time.timeago").timeago();
-  })
+  new timeago().render(document.querySelectorAll('.timeago'));
+
   $("#toggle-btn").click(function(){
     $("#toggle-content").toggle();
     if($(this).html() === "☰") {
