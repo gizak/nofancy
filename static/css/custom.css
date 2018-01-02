@@ -51,6 +51,7 @@ body {
 	font-family: verdana,arial,helvetica,sans-serif;
 	list-style-type:none;
 	padding-left: 1em;
+	padding-bottom: 1em;
 }
 
 .posts li p{
@@ -71,7 +72,7 @@ body {
 	font-family: verdana,arial,helvetica,sans-serif;
 	color:#888;
 	font-size:x-small;
-	margin-bottom:0;
+	margin-bottom: 1em;
 }
 
 .footnote a {
